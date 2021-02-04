@@ -80,11 +80,11 @@ fi
 
 
 #wget https://github.com/jeth123/hadoop-docker/archive/1.2.5.zip 
-wget https://github.com/fankaljead/hadoop-docker/archive/1.0.1.zip
+wget https://github.com/fankaljead/hadoop-docker/archive/1.0.2.zip
 # Unzip Hadoop-docker.zip
 #chmod 777 1.2.5.zip
-unzip 1.0.1.zip
-cd hadoop-docker-1.0.1
+unzip 1.0.2.zip
+cd hadoop-docker-1.0.2
 
 
 # Pull Some Docker Images
@@ -97,7 +97,7 @@ docker pull twinsen/spark:2.3.0
 docker pull twinsen/hbase:1.2.5
 docker pull leidj/sqoop:1.0.2
 docker pull jeth123/zk:1.0.2
-docker pull zhouxianghui/azkasbt:1.0.0
+docker pull zhouxianghui/azkasbt:v1.0.0
 docker network create hadoop-docker
 docker-compose up -d
 
