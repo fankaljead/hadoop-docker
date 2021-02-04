@@ -63,14 +63,18 @@ chmod +x *.sh
 
 ![chmod-x](./images/chmod-x.png)
 
-|  脚本名称  |              脚本作用              | 使用方法                  |
-| :--------: | :--------------------------------: | ------------------------- |
-|   run.sh   |          第一次安装时使用          | 首先进入hadoop-docker目录 |
-|            |                                    | 然后执行 `./run.sh`       |
-|  run2.sh   | 已经安装docker和docker-compose使用 | 首先进入hadoop-docker目录 |
-|            |                                    | `./run2.sh`               |
-| restart.sh |         虚拟机重启之后使用         | 首先进入hadoop-docker目录 |
-|            |                                    | 然后执行`restart.sh`      |
+| 脚本名称          | 脚本作用                           | 使用方法                                                     |
+| :---------------- | :--------------------------------- | ------------------------------------------------------------ |
+| run.sh            | 第一次安装时使用                   | 首先进入hadoop-docker目录                                    |
+|                   |                                    | 然后执行 `./run.sh`                                          |
+| run2.sh           | 已经安装docker和docker-compose使用 | 首先进入hadoop-docker目录                                    |
+|                   |                                    | `./run2.sh`                                                  |
+| onekey-install.sh | 一键安装脚本                       | 下载此脚本，然后赋予可执行权限并执行                         |
+|                   |                                    | `wget https://github.com/fankaljead/hadoop-docker/releases/download/2.0.0/onekey-install.sh` |
+|                   |                                    | `chmod +x onekey-install.sh`                                 |
+|                   |                                    | `./onekey-install.sh`                                        |
+| restart.sh        | 虚拟机重启之后使用                 | 首先进入hadoop-docker目录                                    |
+|                   |                                    | 然后执行`restart.sh`                                         |
 
 - 安装 hadoop-docker 实验平台
 
