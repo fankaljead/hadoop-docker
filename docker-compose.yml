@@ -52,7 +52,7 @@ services:
 
 
   hbase-master:
-    image: jeth123/zk:1.0.2
+    image: zhouxianghui/azkastb:1.0.0
     container_name: hbase-master
     ports:
       - "50070:50070"
@@ -66,6 +66,7 @@ services:
       - "7077:7077"
       - "4040:4040"
       - "9092:9092"
+      - "11111:11111"
     volumes:
       - "./volume/hadoop/work/master:/works"
       - "./volume/hadoop/logs/master:/root/hadoop/logs/"
