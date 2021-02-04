@@ -2,6 +2,8 @@
 
 ########################################
 #### Hadoop-Docker 一键安装脚本 #########
+### 直接下载此文件 ######################
+### 赋予可执行权限安装 ##################
 ### 安装 docker ########################
 ### 安装 docker-compose ################
 ### 安装 hadoop 实验平台 ################
@@ -88,11 +90,11 @@ fi
 
 
 #wget https://github.com/jeth123/hadoop-docker/archive/1.2.5.zip 
-#wget https://github.com/fankaljead/hadoop-docker/archive/2.0.0.zip
+wget https://github.com/fankaljead/hadoop-docker/archive/2.0.0.zip
 # Unzip Hadoop-docker.zip
 #chmod 777 1.2.5.zip
-#unzip 2.0.0.zip
-#cd hadoop-docker-2.0.0
+unzip 2.0.0.zip
+cd hadoop-docker-2.0.0
 
 
 # Pull Some Docker Images
