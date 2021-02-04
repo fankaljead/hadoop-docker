@@ -80,11 +80,11 @@ fi
 
 
 #wget https://github.com/jeth123/hadoop-docker/archive/1.2.5.zip 
-wget https://github.com/fankaljead/hadoop-docker/archive/1.0.2.zip
+wget https://github.com/fankaljead/hadoop-docker/archive/2.0.0.zip
 # Unzip Hadoop-docker.zip
 #chmod 777 1.2.5.zip
-unzip 1.0.2.zip
-cd hadoop-docker-1.0.2
+unzip 2.0.0.zip
+cd hadoop-docker-2.0.0
 
 
 # Pull Some Docker Images
@@ -104,6 +104,7 @@ docker-compose up -d
 
 echo 'sleeping 15s for service up'
 sleep 15s
+docker cp ./volume/zk/hbase-master/hosts hbase-master:/etc/
 docker-compose exec hbase-master hdfs namenode -format
 docker-compose exec hbase-master schematool -dbType mysql -initSchema
 echo 'sleeping 10s for creating table'

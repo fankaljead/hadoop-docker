@@ -52,7 +52,7 @@ services:
 
 
   hbase-master:
-    image: zhouxianghui/azkastb:v1.0.0
+    image: zhouxianghui/azkasbt:v1.0.0
     container_name: hbase-master
     ports:
       - "50070:50070"
