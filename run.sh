@@ -80,11 +80,11 @@ fi
 
 
 #wget https://github.com/jeth123/hadoop-docker/archive/1.2.5.zip 
-wget https://github.com/fankaljead/hadoop-docker/archive/1.0.0.zip
+wget https://github.com/fankaljead/hadoop-docker/archive/1.0.1.zip
 # Unzip Hadoop-docker.zip
 #chmod 777 1.2.5.zip
-unzip 1.2.5.zip
-cd hadoop-docker-1.1.1
+unzip 1.0.1.zip
+cd hadoop-docker-1.0.1
 
 
 # Pull Some Docker Images
@@ -97,6 +97,7 @@ docker pull twinsen/spark:2.3.0
 docker pull twinsen/hbase:1.2.5
 docker pull leidj/sqoop:1.0.2
 docker pull jeth123/zk:1.0.2
+docker pull zhouxianghui/azkasbt:1.0.0
 docker network create hadoop-docker
 docker-compose up -d
 
@@ -116,10 +117,15 @@ docker-compose exec hbase-master start-dfs.sh
 docker-compose exec hbase-master start-yarn.sh
 docker-compose exec hbase-master start-all.sh
 docker-compose exec hbase-master start-hbase.sh
+docker-compose exec hbase-master start-solo.sh
+
 echo 'check zookeeper'
 docker-compose exec hbase-master ./root/zookeeper/bin/zkServer.sh status
 docker-compose exec hbase-slave1 ./root/zookeeper/bin/zkServer.sh status
 docker-compose exec hbase-slave2 ./root/zookeeper/bin/zkServer.sh status
 echo 'check sqoop'
 docker-compose exec hbase-master sqoop list-databases --connect jdbc:mysql://mysql:3306/ --username root --password hadoop
+
+echo "Hbase master JPS"
+docker-compose exec hbase-master jps
 docker-compose exec hbase-master /bin/bash
