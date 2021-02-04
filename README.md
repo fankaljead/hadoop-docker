@@ -90,6 +90,54 @@ chmod +x *.sh
 
   注意此安装过程会从 [dockerhub](https://hub.docker.com/) 拉取镜像文件，这里会很耗时间(还可能很多次重试)，取决于网络情况，强烈建议开启代理和docker镜像加速
 
+  ![run2-1](./images/run2-1.png)
+
+  ![run2-2](./images/run2-2.png)
+
+  ![run2-3](./images/run2-3.png)
+
+  ### 测试安装情况
+
+  - Hbase-shell
+
+    在hbase-master里面输入 `hbase shell` 查看是否有问题
+
+    ![hbase-shell](./images/hbase-shell.png)
+
+  - spark shell
+
+    ![spark-shell](./images/spark-shell.png)
+
+  - sbt 打包程序
+
+    ```shell
+    # 进入 sparkapp 测试代码目录 这里有个已经编译好的 scala 程序
+    cd sparkapp/src/main/scala/
+    spark-submit --class "SimpleApp" target/scala-2.11/simple-project_2.11-1.0.jar
+    ```
+
+    ![sbt-test](./images/sbt-test.png)
+
+  - Azkaban
+
+    在hbase-master里面输入 `jps` 查看是否有 `AzkabanSingleServer` 进程,，如果没有则进入下面目录输入
+
+    ```shell
+    bin/start-solo.sh
+    ```
+
+    
+
+    ![azkaban-jps](./images/azkaban-jps.png)
+
+    在浏览器中输入虚拟机ip:9090 查看，这里登陆名和密码都是 `azkaban` 相关配置信息在上图目录下的 `azkaban-users.xml` 里面配置
+
+    ![azkaban-web](./images/azkaban-web.png)
+
+  - Kafka 的配置在 hbase-master:/root/kafka下面
+
+  ![hbase-master-ls-root](./images/hbase-master-ls-root.png)
+
 - 重启后重新开启hadoop-docker实验平台
 
   ```shell
@@ -122,3 +170,6 @@ chmod +x *.sh
 |                |                               |   8088   |    8088    |
 |    `mysql`     |         `mysql` 端口          |   3306   |    3306    |
 
+## That's All
+
+Enjoy your learning ☺:) !
