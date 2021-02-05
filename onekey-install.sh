@@ -25,21 +25,21 @@ else
     if [[ $edition =~ "CentOS Linux" ]]; then
         echo "Your system is Centos"
         echo "Installing Docker"
-        yum -y install yum-utils curl vim git
-	yum install -y wget
+        sudo yum -y install yum-utils curl vim git
+	    sudo yum install -y wget
         # yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
         # yum-config-manager \
         #     --add-repo \
         #     https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
-        yum-config-manager \
+        sudo yum-config-manager \
             --add-repo \
             http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-        yum install -y docker-ce-18.03.1.ce
+        sudo yum install -y docker-ce-18.03.1.ce
     elif [[ $edition =~ "Ubuntu" ]]; then
         echo "Your system is Ubuntu"
-        apt install curl wget vim git -y 
+        sudo apt install curl wget vim git -y 
         
-        curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+        sudo curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
     fi
     
     # Copy the mirror configuration to /etc/docker
@@ -50,10 +50,11 @@ else
     #    "registry-mirrors": ["https://0pjd7q4y.mirror.aliyuncs.com"]
     #}
     #EOF
-    usermod -aG docker lab
-    systemctl enable docker
-    systemctl start docker
-    exit
+    sudo usermod -aG docker $USER
+    sudo newgrp docker 
+    sudo systemctl enable docker
+    sudo systemctl start docker
+    # exit
 fi
 
 
@@ -83,9 +84,9 @@ then
     echo "docker-compose has already installed"
 else
     echo "Installing Docker-compose"
-    curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
-    ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 fi
 
 
