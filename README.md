@@ -6,6 +6,10 @@
 
 较 [azkasbt](https://github.com/fankaljead/hadoop-docker/tree/azkasbt) 添加了对 `phoenix` `maven` 的支持
 
+
+
+**注意:** 本分支暂未测试，成功性待知
+
 ## 软件版本
 
 -  操作系统: CentOS 6
