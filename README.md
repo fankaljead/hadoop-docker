@@ -4,28 +4,24 @@
 
 [Oringina-README](./README-oringinal.md)
 
+较 [azkasbt](https://github.com/fankaljead/hadoop-docker/tree/azkasbt) 添加了对 `phoenix` `maven` 的支持
+
 ## 软件版本
 
 -  操作系统: CentOS 6
-
-- Java环境: OpenJDK 8
-
-- Hadoop: 2.7.2
-
-- Spark: 2.1.0
-
-- Hive: 2.1.1
-
-- HBase: 1.2.2
-
-- Zookeeper: 3.4.8
-
+-  Java环境: OpenJDK 8
+-  Hadoop: 2.7.2
+-  Spark: 2.1.0
+-  Hive: 2.1.1
+-  HBase: 1.2.2
+-  Zookeeper: 3.4.8
 - Azkaban: 3.90.0
 - Sbt: 1.4.6
 - Kafka: 2.7.0
 - Python3.6
-- Gradle: 4.6
-
+- Phoenix: 4.10.0
+- Maven: 3.2.2
+-  Gradle: 4.6
 - 基于docker-compose管理镜像和容器，并进行集群的编排
 
  所有软件的二进制包均通过网络下载。其中包含自行编译的Hadoop和Protobuf二进制包，保存在Github上，其它软件的二进制包均使用Apache官方镜像。
