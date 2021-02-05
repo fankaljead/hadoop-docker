@@ -43,13 +43,14 @@ else
     fi
     
     # Copy the mirror configuration to /etc/docker
-    #echo 'Adding mirror acceleration'
-    #mkdir -p /etc/docker
+    echo 'Adding mirror acceleration'
+    sudo mkdir -p /etc/docker
     #tee /etc/docker/daemon.json <<-'EOF'
-    #{
-    #    "registry-mirrors": ["https://0pjd7q4y.mirror.aliyuncs.com"]
-    #}
-    #EOF
+    sudo cat >> /etc/daemon.json <<EOF
+    {
+       "registry-mirrors": ["https://0pjd7q4y.mirror.aliyuncs.com"]
+    }
+    EOF
     sudo usermod -aG docker $USER
     sudo newgrp docker 
     sudo systemctl enable docker
