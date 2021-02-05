@@ -90,11 +90,11 @@ fi
 
 
 #wget https://github.com/jeth123/hadoop-docker/archive/1.2.5.zip 
-wget https://github.com/fankaljead/hadoop-docker/archive/2.0.0.zip
+wget https://github.com/fankaljead/hadoop-docker/archive/2.0.1.zip
 # Unzip Hadoop-docker.zip
 #chmod 777 1.2.5.zip
-unzip 2.0.0.zip
-cd hadoop-docker-2.0.0
+unzip 2.0.1.zip
+cd hadoop-docker-2.0.1
 
 
 # Pull Some Docker Images
