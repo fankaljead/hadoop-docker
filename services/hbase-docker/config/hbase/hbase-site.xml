@@ -37,4 +37,8 @@
 		<name>hbase.tmp.dir</name>
 		<value>/hworks/hbase/tmp</value>
 	</property>
+	<property>
+		<name>phoenix.schema.isNamespaceMappingEnabled</name>
+		<value>true</value>
+		</property>
 </configuration>

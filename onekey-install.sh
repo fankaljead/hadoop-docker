@@ -107,13 +107,14 @@ docker pull twinsen/spark:2.3.0
 docker pull twinsen/hbase:1.2.5
 docker pull leidj/sqoop:1.0.2
 docker pull jeth123/zk:1.0.2
-docker pull zhouxianghui/azkasbt:v1.0.0
+docker pull zhouxianghui/azkasbt:1.0.1
 docker network create hadoop-docker
 docker-compose up -d
 
 
 echo 'sleeping 15s for service up'
 sleep 15s
+docker-compose exec hbase-master ./root/phoenix-configing.sh
 docker cp ./volume/zk/hbase-master/hosts hbase-master:/etc/
 docker-compose exec hbase-master hdfs namenode -format
 docker-compose exec hbase-master schematool -dbType mysql -initSchema
