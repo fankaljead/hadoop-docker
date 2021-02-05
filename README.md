@@ -4,6 +4,10 @@
 
 [Oringina-README](./README-oringinal.md)
 
+
+
+[Phoenix安装指南](./install-phoenix.md)
+
 ## 软件版本
 
 -  操作系统: CentOS 6
