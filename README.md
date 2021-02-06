@@ -4,7 +4,7 @@
 
 [Oringina-README](./README-oringinal.md)
 
-较 [azkasbt](https://github.com/fankaljead/hadoop-docker/tree/azkasbt) 添加了对 `phoenix` `maven` 的支持
+本分支较分支 [azkasbt](https://github.com/fankaljead/hadoop-docker/tree/azkasbt) 添加了对 `phoenix` `maven` 的支持
 
 
 
@@ -75,6 +75,8 @@ chmod +x *.sh
 |                   |                                    | `./onekey-install.sh`                                        |
 | restart.sh        | 虚拟机重启之后使用                 | 首先进入hadoop-docker目录                                    |
 |                   |                                    | 然后执行`restart.sh`                                         |
+| stop-all.sh       | 停止所有组件及容器                 | 首先进入hadoop-docker目录                                    |
+|                   |                                    | 然后执行`./stop-all.sh`                                      |
 
 - 安装 hadoop-docker 实验平台
 
