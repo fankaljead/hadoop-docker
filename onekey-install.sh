@@ -10,10 +10,11 @@
 ### fankaljead@gmail.com ###############
 ########################################
 
-echo '==========================================================='
-echo '===Welcome to Big Data Analysis Auto Installation Sctipt==='
-echo 'Big Data Analysis and Processing Course By ldj@cqupt.edu.cn'
-echo '==========================================================='
+echo '============================================================='
+echo '===Welcome to Big Data Analysis Auto Installation Sctipt====='
+echo '=== Chongqing University of Posts and Telecommunications ===='
+echo 'Big Data Analysis and Processing Course By leidj@cqupt.edu.cn'
+echo '============================================================='
 
 # Install Docker With Offitial Script
 if hash docker 2>/dev/null;

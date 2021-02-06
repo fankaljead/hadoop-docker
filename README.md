@@ -78,7 +78,9 @@ chmod +x *.sh
 |                   |                                    | `chmod +x onekey-install.sh`                                 |
 |                   |                                    | `./onekey-install.sh`                                        |
 | restart.sh        | 虚拟机重启之后使用                 | 首先进入hadoop-docker目录                                    |
-|                   |                                    | 然后执行`restart.sh`                                         |
+|                   |                                    | 然后执行`./restart.sh`                                       |
+| stop-all.sh       | 停止所有容器                       | 首先进入hadoop-docker目录                                    |
+|                   |                                    | `./stop-all.sh`                                              |
 
 - 安装 hadoop-docker 实验平台
 

@@ -6,7 +6,7 @@
 ### fankaljead@gmail.com ###############
 ########################################
 
-docker-compose up -d
+docker-compose start
 
 
 echo '======sleeping 15s for service up========='
