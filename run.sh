@@ -54,10 +54,11 @@ else
     }
     EOF
 
-    sudo usermod -aG docker lab
     sudo groupadd docker
-    sudo systemctl enable docker
-    sudo systemctl start docker
+    sudo usermod -aG docker lab
+
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
 fi
 
 
