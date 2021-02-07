@@ -84,7 +84,7 @@ services:
     tty: true
     links:
       - hbase-slave1:zoo2
-      - habse-slave2:zoo3
+      - hbase-slave2:zoo3
       - mysql
 
   mysql:
