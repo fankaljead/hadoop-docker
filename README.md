@@ -41,7 +41,7 @@
 然后克隆本仓库
 
 ```bash
-git clone --depth 1 https://github.com/fankaljead/hadoop-docker.git
+git clone https://github.com/fankaljead/hadoop-docker.git
 ```
 
 ![git clone](./images/git-clone.png)
@@ -50,8 +50,20 @@ git clone --depth 1 https://github.com/fankaljead/hadoop-docker.git
 
 ```bash
 cd hadoop-docker
+
+# 切换到azkabst-with-phoenix 分支
+git checkout azkabst-with-phoenix
+
+git branch
+```
+
+![git-branch](./images/git-branch.png)
+
+```shell
 ls *.sh
 ```
+
+
 
 ![ls-al-sh](./images/ls-al-sh.png)
 
