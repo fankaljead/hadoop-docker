@@ -40,6 +40,10 @@ docker-compose exec hbase-master start-dfs.sh
 docker-compose exec hbase-master start-yarn.sh
 docker-compose exec hbase-master start-all.sh
 docker-compose exec hbase-master start-hbase.sh
+
+docker cp ./volume/zk/hbase-master/hosts hbase-master:/root
+docker-compose exec hbase-master cp /root/hosts/ /etc/
+
 echo "======starting azkaban solo jetty server====="
 docker-compose exec hbase-master start-solo.sh
 echo '======check zookeeper========================'
