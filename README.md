@@ -136,6 +136,17 @@ chmod +x *.sh
 
     ![azkaban-jps](./images/azkaban-jps.png)
 
+    
+
+    - azkaban 启动 需要先进入 `/root/azkaban/azkaban-solo-server/build/distributions/azkaban-solo-server-0.1.0-SNAPSHOT` 然后执行`bin/start-solo.sh`
+
+      ```shell
+      cd /root/azkaban/azkaban-solo-server/build/distributions/azkaban-solo-server-0.1.0-SNAPSHOT
+      bin/start-solo.sh
+      ```
+
+      
+
     在浏览器中输入虚拟机ip:9090 查看，这里登陆名和密码都是 `azkaban` 相关配置信息在上图目录下的 `azkaban-users.xml` 里面配置
 
     ![azkaban-web](./images/azkaban-web.png)
