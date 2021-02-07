@@ -136,8 +136,8 @@ docker-compose exec hbase-master start-all.sh
 docker-compose exec hbase-master start-hbase.sh
 docker-compose exec hbase-master start-solo.sh
 
-docker cp ./volume/zk/hbase-master/hosts hbase-master:/root
-docker-compose exec hbase-master cp /root/hosts/ /etc/
+# docker cp ./volume/zk/hbase-master/hosts hbase-master:/root
+# docker-compose exec hbase-master cp /root/hosts/ /etc/
 
 echo 'check zookeeper'
 docker-compose exec hbase-master ./root/zookeeper/bin/zkServer.sh status
