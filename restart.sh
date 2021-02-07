@@ -23,6 +23,7 @@ docker-compose exec hbase-master stop-dfs.sh
 docker-compose exec hbase-master start-dfs.sh
 docker-compose exec hbase-master start-yarn.sh
 docker-compose exec hbase-master start-all.sh
+docker-compose exec hbase-master stop-hbase.sh
 docker-compose exec hbase-master start-hbase.sh
 
 
