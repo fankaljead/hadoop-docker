@@ -80,7 +80,12 @@ services:
       hadoop-docker:
         aliases:
           - hbase-master
+          - zoo1
     tty: true
+    links:
+      - hbase-slave1:zoo2
+      - habse-slave2:zoo3
+      - mysql
 
   mysql:
     image: mysql:5.7
