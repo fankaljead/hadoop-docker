@@ -49,10 +49,10 @@ else
        "registry-mirrors": ["https://0pjd7q4y.mirror.aliyuncs.com"]
     }
     EOF
-    sudo usermod -aG docker lab
     sudo groupadd docker
-    sudo systemctl enable docker
-    sudo systemctl start docker
+    sudo usermod -aG docker lab
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
 fi
 
 
