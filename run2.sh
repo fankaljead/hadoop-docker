@@ -20,7 +20,7 @@ docker pull zhouxianghui/azkasbt:1.0.1
 docker network create hadoop-docker
 docker-compose up -d
 
-docker-compose up -d
+
 
 
 echo '======sleeping 15s for service up========='
