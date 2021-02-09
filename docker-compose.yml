@@ -1,7 +1,7 @@
 version: '2'
 services:
   hbase-slave1:
-    image: jeth123/zk:1.0.2
+    image: zhouxianghui/hbase-slave:1.0.0
     container_name: hbase-slave1
     volumes:
       - "./volume/hadoop/work/slave1:/works"
@@ -15,10 +15,14 @@ services:
       hadoop-docker:
         aliases:
           - hbase-slave1
+          - zoo2
     tty: true
+    links:
+      - hbase-slave2:zoo3
+      - hbase-master:zoo1
 
   hbase-slave2:
-    image: jeth123/zk:1.0.2
+    image: zhouxianghui/hbase-slave:1.0.0
     container_name: hbase-slave2
     volumes:
       - "./volume/hadoop/work/slave2:/works"
@@ -32,7 +36,11 @@ services:
       hadoop-docker:
         aliases:
           - hbase-slave2
+          - zoo3
     tty: true
+    links:
+      - hbase-slave1:zoo2
+      - hbase-master:zoo1
 
   hbase-slave3:
     image: jeth123/zk:1.0.2
@@ -49,6 +57,10 @@ services:
         aliases:
           - hbase-slave3
     tty: true
+    links:
+      - hbase-slave1:zoo2
+      - hbase-slave2:zoo3
+      - hbase-master:zoo1
 
 
   hbase-master:
@@ -66,7 +78,9 @@ services:
       - "7077:7077"
       - "4040:4040"
       - "9092:9092"
-      - "11111:11111"
+      - "11111-11120:11111-11120"
+      - "11112:11112"
+      # - "1-65535:1-65535"
     volumes:
       - "./volume/hadoop/work/master:/works"
       - "./volume/hadoop/logs/master:/root/hadoop/logs/"

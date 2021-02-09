@@ -7,9 +7,6 @@
 本分支较分支 [azkasbt](https://github.com/fankaljead/hadoop-docker/tree/azkasbt) 添加了对 `phoenix` `maven` 的支持
 
 
-
-**注意:** 本分支暂未测试，成功性待知
-
 ## 软件版本
 
 -  操作系统: CentOS 6
@@ -25,7 +22,7 @@
 - Python3.6
 - Phoenix: 4.10.0
 - Maven: 3.2.2
--  Gradle: 4.6
+- Gradle: 4.6
 - 基于docker-compose管理镜像和容器，并进行集群的编排
 
  所有软件的二进制包均通过网络下载。其中包含自行编译的Hadoop和Protobuf二进制包，保存在Github上，其它软件的二进制包均使用Apache官方镜像。
