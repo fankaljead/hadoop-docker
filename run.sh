@@ -120,7 +120,7 @@ docker-compose up -d
 
 echo 'sleeping 15s for service up'
 sleep 15s
-docker cp ./volume/zk/hbase-master/hosts hbase-master:/etc/
+# docker cp ./volume/zk/hbase-master/hosts hbase-master:/etc/
 docker-compose exec hbase-master ./root/phoenix-configing.sh
 docker-compose exec hbase-master hdfs namenode -format
 docker-compose exec hbase-master schematool -dbType mysql -initSchema

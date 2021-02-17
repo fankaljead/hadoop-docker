@@ -17,9 +17,9 @@ services:
           - hbase-slave1
           - zoo2
     tty: true
-    links:
-      - hbase-slave2:zoo3
-      - hbase-master:zoo1
+    # links:
+    #   - hbase-slave2:zoo3
+    #   - hbase-master:zoo1
 
   hbase-slave2:
     image: zhouxianghui/hbase-slave:1.0.0
@@ -38,9 +38,9 @@ services:
           - hbase-slave2
           - zoo3
     tty: true
-    links:
-      - hbase-slave1:zoo2
-      - hbase-master:zoo1
+    # links:
+    #   - hbase-slave1:zoo2
+    #   - hbase-master:zoo1
 
   hbase-slave3:
     image: jeth123/zk:1.0.2
@@ -79,7 +79,7 @@ services:
       - "4040:4040"
       - "9092:9092"
       - "11111-11120:11111-11120"
-      - "11112:11112"
+      # - "11112:11112"
       # - "1-65535:1-65535"
     volumes:
       - "./volume/hadoop/work/master:/works"
