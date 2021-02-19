@@ -12,7 +12,8 @@
 -  操作系统: CentOS 6
 -  Java环境: OpenJDK 8
 -  Hadoop: 2.7.2
--  Spark: 2.1.0
+-  Spark: 3.0.1
+-  Scale: 2.12.10
 -  Hive: 2.1.1
 -  HBase: 1.2.2
 -  Zookeeper: 3.4.8

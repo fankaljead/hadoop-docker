@@ -1,7 +1,7 @@
 version: '2'
 services:
   hbase-slave1:
-    image: zhouxianghui/hbase-slave:1.0.0
+    image: zhouxianghui/hbase-slave:1.0.1
     container_name: hbase-slave1
     volumes:
       - "./volume/hadoop/work/slave1:/works"
@@ -22,7 +22,7 @@ services:
     #   - hbase-master:zoo1
 
   hbase-slave2:
-    image: zhouxianghui/hbase-slave:1.0.0
+    image: zhouxianghui/hbase-slave:1.0.1
     container_name: hbase-slave2
     volumes:
       - "./volume/hadoop/work/slave2:/works"
@@ -43,7 +43,7 @@ services:
     #   - hbase-master:zoo1
 
   hbase-slave3:
-    image: jeth123/zk:1.0.2
+    image: zhouxianghui/hbase-slave3:1.0.1
     container_name: hbase-slave3
     volumes:
       - "./volume/hadoop/work/slave3:/works"
@@ -64,7 +64,7 @@ services:
 
 
   hbase-master:
-    image: zhouxianghui/azkasbt:1.0.1
+    image: zhouxianghui/azkasbt:1.0.2
     container_name: hbase-master
     ports:
       - "50070:50070"
