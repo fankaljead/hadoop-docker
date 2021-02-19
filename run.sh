@@ -112,8 +112,9 @@ docker pull twinsen/spark:2.3.0
 docker pull twinsen/hbase:1.2.5
 docker pull leidj/sqoop:1.0.2
 docker pull jeth123/zk:1.0.2
-docker pull zhouxianghui/hbase-slave:1.0.0
-docker pull zhouxianghui/azkasbt:1.0.1
+docker pull zhouxianghui/hbase-slave:1.0.1
+docker pull zhouxianghui/hbase-slave3:1.0.0
+docker pull zhouxianghui/azkasbt:1.0.2
 docker network create hadoop-docker
 docker-compose up -d
 
