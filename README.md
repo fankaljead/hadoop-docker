@@ -13,7 +13,7 @@
 -  Java环境: OpenJDK 8
 -  Hadoop: 2.7.2
 -  Spark: 3.0.1
--  Scale: 2.12.10
+-  Scala: 2.12.10
 -  Hive: 2.1.1
 -  HBase: 1.2.2
 -  Zookeeper: 3.4.8
@@ -27,6 +27,11 @@
 - 基于docker-compose管理镜像和容器，并进行集群的编排
 
  所有软件的二进制包均通过网络下载。其中包含自行编译的Hadoop和Protobuf二进制包，保存在Github上，其它软件的二进制包均使用Apache官方镜像。
+
+另附有安装好的 [vmware系统镜像](https://pan.baidu.com/s/1UWANAf0iuABbXF41W9MxXQ) 
+
+提取码：z9g3 导入vmware即可以使用，用户名为 `lab`，用户密码为 `cqupt`
+
 
 ## 安装过程
 
